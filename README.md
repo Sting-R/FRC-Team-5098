@@ -18,6 +18,10 @@ Note: We can continue to use the original assets as there really isn't a reason 
 This is free for **anyone** to contribute to! (Especailly if you are part of our team)  
 If you would like to contribute to this repository; ✨amazing!✨ Just follow some rules:
 
+<!---
+Note: The links here will be updated whenever the issues, wiki and discussions get set up.
+--->
+
 **Wiki**
 - Before you edit anything in the wiki, prepose your change in the [discussion](https://github.com/J-The-Fox/FRC-Team-5098/discussions/3) first
 - If you take images, text, screenshots, etc from somewhere else for the wiki, give credit to the original source or author!
@@ -33,3 +37,89 @@ If you would like to contribute to this repository; ✨amazing!✨ Just follow s
 - Be cival and kind. Giving constructive critisim is okay but at least be kind about it
 - If you have any questions or have an issue, feel free to start a discussion or open up an issue
 - Look in the [TODO discussion](https://github.com/J-The-Fox/FRC-Team-5098/discussions/4) to see what else needs to be completed. If you wanna add something or change something, feel free to ask
+
+## Robot Setup
+
+<!---
+Note: This section may be moved to the Wiki, up for discussion
+--->
+
+### Networking
+
+This uses the standard TE.AM IP Notation[^1]
+
+<!---
+Note: This will be updated to our current robot setup whenever it gets built and designed. But we don't know what's coming yet!
+--->
+
+**With the OpenMesh Radio**
+
+```mermaid
+---
+config:
+  look: classic
+  layout: elk
+  theme: neo-dark
+---
+flowchart TD
+    RoboRIO["RoboRIO
+    (10.50.98.2)
+    (172.22.11.2 via USB)"] <-- Ethernet --> NetworkSwitch["Network Switch
+    *Unmanaged*"]
+    NetworkSwitch <-- Ethernet --> Radio["Radio
+    *DHCP Server*
+    (10.50.98.1)"] & Limelight["Limelight
+    (10.50.98.Y)"] & OtherDevice["Other Networked Devices
+    (10.50.98.Z)"] & Computer["Computer
+    (10.50.98.X)
+    (172.22.11.1 via USB)"]
+    Computer <-- WiFi --> Radio
+    Computer <-- USB --> RoboRIO
+    NetworkSwitch@{ shape: card}
+    Computer@{ shape: tag-proc}
+
+```
+---
+**With the VH-109 Radio from West Coast Products**
+
+> [!NOTE]
+> If there are 2 or less Limelights and other networked devices, those devices will be connected to the radio instead. So there will not be a need for a network switch
+
+```mermaid
+---
+config:
+  look: classic
+  layout: elk
+  theme: neo-dark
+---
+flowchart TD
+    RoboRIO["RoboRIO
+    (10.50.98.2)
+    (172.22.11.2 via USB)"] <-- Ethernet --> Radio["Radio
+    *DHCP Server*
+    (10.50.98.1)"]
+    NetworkSwitch["Network Switch
+    *Unmanaged*"] <-- Ethernet --> Radio & Limelight["Limelight
+    (10.50.98.Y)"] & OtherDevice["Other Networked Devices
+    (10.50.98.Z)"]
+    Computer["Computer
+    (10.50.98.X)
+    (172.22.11.1 via USB)"] <-- WiFi --> Radio
+    Computer <-- USB --> RoboRIO
+    Computer <-- Ethernet --> Radio
+    NetworkSwitch@{ shape: card}
+    Computer@{ shape: tag-proc}
+```
+
+### Drive System
+
+The drive system used is the Swerve X[^2]  
+The motor that we use is most likely going to be the Kraken X60
+
+However, due to issues with the Kraken X60s during the 2023-2024 year, we may revert back to Falcon 500s. The issue at hand was the Kraken X60s failing during matches where the motor would fail to spin at full rpm, sound terrible and heat up very quickly. During last season alone, we lost 3 Kraken X60s. Hopefully during this year's 2024-2025 season, we won't experience as many issues. But the motors in use for th edrive system is still up for discussion.
+
+> [!NOTE]
+> Other information will be posted whenever we have a more up-to-date design of our robot (and whenever we know what the challange will be!)
+
+[^1]: [TE.AM IP Notation](https://docs.wpilib.org/en/stable/docs/networking/networking-introduction/ip-configurations.html#te-am-ip-notation)
+[^2]: [Swerve X](https://wcproducts.com/products/swerve-x)
