@@ -1,13 +1,17 @@
 # FRC Team 5098 Sting-r
 
-![FRC-Team-5098-GitHub](https://github.com/J-The-Fox/FRC-Team-5098/assets/116409406/5e9d98b5-ade7-4456-bec0-9831072bbb54)
-![badge](https://img.shields.io/github/last-commit/J-The-Fox/FRC-Team-5098?color=ee7b1a&display_timestamp=committer&label=Last%20Commit&style=flat-square)
-![badge](https://img.shields.io/github/issues-pr/J-The-Fox/FRC-Team-5098?color=ee7b1a&label=Pull%20Requests&style=flat-square)
-![badge](https://img.shields.io/github/contributors/J-The-Fox/FRC-Team-5098?color=ee7b1a&label=Contributors&style=flat-square)
-![badge](https://img.shields.io/github/issues-raw/J-The-Fox/FRC-Team-5098?color=ee7b1a&label=Open%20Issues&style=flat-square)
-![badge](https://img.shields.io/github/issues-closed-raw/J-The-Fox/FRC-Team-5098?color=ee7b1a&label=Closed%20Issues&style=flat-square)
+<!---
+Note: We can continue to use the original assets as there really isn't a reason to upload them here unless the old repo is removed
+--->
 
-[![Readme Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=J-The-Fox&repo=FRC-Team-5098&theme=dark)](https://github.com/J-The-Fox/FRC-Team-5098)
+![FRC-Team-5098-GitHub](https://github.com/J-The-Fox/FRC-Team-5098/assets/116409406/5e9d98b5-ade7-4456-bec0-9831072bbb54)
+![Last Commit](https://img.shields.io/github/last-commit/Sting-R/FRC-Team-5098?color=700e9b&display_timestamp=committer&label=Last%20Commit&style=flat-square)
+![Pull Requests](https://img.shields.io/github/issues-pr/Sting-R/FRC-Team-5098?color=ffd000&label=Pull%20Requests&style=flat-square)
+![Contributors](https://img.shields.io/github/contributors/Sting-R/FRC-Team-5098?color=700e9b&label=Contributors&style=flat-square)
+![Open Issues](https://img.shields.io/github/issues-raw/Sting-R/FRC-Team-5098?color=ffd000&label=Open%20Issues&style=flat-square)
+![Closed Issues](https://img.shields.io/github/issues-closed-raw/Sting-R/FRC-Team-5098?color=700e9b&label=Closed%20Issues&style=flat-square)
+
+[![Readme Card](https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=Sting-R&repo=FRC-Team-5098&theme=shades-of-purple&bg_color=00000000)](https://github.com/Sting-R/FRC-Team-5098)
 
 ## Contributing
 
@@ -29,7 +33,3 @@ If you would like to contribute to this repository; ✨amazing!✨ Just follow s
 - Be cival and kind. Giving constructive critisim is okay but at least be kind about it
 - If you have any questions or have an issue, feel free to start a discussion or open up an issue
 - Look in the [TODO discussion](https://github.com/J-The-Fox/FRC-Team-5098/discussions/4) to see what else needs to be completed. If you wanna add something or change something, feel free to ask
-
----
-Happy Programming!  
-\- [J-The-Fox](https://github.com/J-The-Fox)
