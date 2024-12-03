@@ -4,9 +4,9 @@ name: Gradle Dependencies and Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "workflow-testing" ] # Change to "main" when merged
   pull_request:
-    branches: [ "main" ]
+    branches: [ "workflow-testing" ] # Change to "main" when merged
 
 jobs:
   build:
