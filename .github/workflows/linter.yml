@@ -1,0 +1,32 @@
+# Workflow to lint and format code using super-linter
+#
+# https://github.com/github/super-linter
+
+name: Linting and Formatting
+
+on:
+  push:
+    branches: [ "workflow-testing" ] # Change to "main" when merged
+  pull_request:
+    branches: [ "workflow-testing" ] # Change to "main" when merged
+
+jobs:
+  super-linter:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        # Full git history is needed to get a proper list of changed files within `super-linter`
+        fetch-depth: 0
+          
+    - name: Lint Code Base
+      uses: github/super-linter@v4
+      # Update the environment here
+      env:
+        VALIDATE_ALL_CODEBASE: false
+        DEFAULT_BRANCH: "main"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
