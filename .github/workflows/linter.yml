@@ -28,5 +28,7 @@ jobs:
       # Update the environment here
       env:
         VALIDATE_ALL_CODEBASE: false
+        # Add files or folders to exclude here
+        FILTER_REGEX_EXCLUDE: ".*vendordeps/.*|.*gradlew|.*.gradle|.*WPILib-License.md.*"
         DEFAULT_BRANCH: "main"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
