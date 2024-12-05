@@ -42,7 +42,7 @@ Note: The links here will be updated whenever the issues, wiki, and discussions 
 
 ### Drive System
 
-The drive system used is the Swerve X[^2]  
+The drive system used is the Swerve X[^1]  
 The motor that we use is most likely going to be the Kraken X60
 
 However, due to issues with the Kraken X60s during the 2023-2024 year, we may revert back to Falcon 500s. The issue at hand was the Kraken X60s failing during matches where the motor would fail to spin at full rpm, sound terrible, and heat up very quickly.
@@ -51,5 +51,4 @@ During last season alone, we lost 3 Kraken X60s. Hopefully, during this year's 2
 > [!NOTE]
 > Other information will be posted whenever we have a more up-to-date design of our robot (and whenever we know what the challenge will be!)
 
-[^1]: [TE.AM IP Notation](https://docs.wpilib.org/en/stable/docs/networking/networking-introduction/ip-configurations.html#te-am-ip-notation)
-[^2]: [Swerve X](https://wcproducts.com/products/swerve-x)
+[^1]: [Swerve X](https://wcproducts.com/products/swerve-x)

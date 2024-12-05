@@ -23,7 +23,7 @@ public final class Main {
      * Main initialization function. Do not perform any initialization here.
      *
      * <p>If you change your main robot class, change the parameter type.
-     * 
+     *
      * @param args Arguments passed to the main function.
      */
     public static void main(final String... args) {
