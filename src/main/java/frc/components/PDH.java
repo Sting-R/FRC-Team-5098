@@ -7,7 +7,7 @@ import edu.wpi.first.hal.PowerDistributionVersion;
 
 /**
  * Power Distribution Hub Class
- * 
+ *
  * <p>
  * This class holds methods used for the Power Distribution Hub.
  * </p>
@@ -15,19 +15,21 @@ import edu.wpi.first.hal.PowerDistributionVersion;
 public class PDH {
 
     /**
-     * Number of channels on the Power Distribution Hub
+     * Number of channels on the Power Distribution Hub.
      */
     private int numChannels;
 
     /**
-     * Power Distribution Hub Object
+     * Power Distribution Hub Object.
      */
     private PowerDistribution pdh;
 
     /**
-     * PDH Constructor
+     * PDH Constructor.
+     *
+     * @param id The ID of the Power Distribution Hub
      */
-    public PDH(final int id){
+    public PDH(final int id) {
         pdh = new PowerDistribution(id, PowerDistribution.ModuleType.kRev);
         numChannels = pdh.getNumChannels();
     }
@@ -35,17 +37,17 @@ public class PDH {
     // Power //
 
     /**
-     * Get the overall voltage of the Power Distribution Hub
-     * 
+     * Get the overall voltage of the Power Distribution Hub.
+     *
      * @return The voltage of the Power Distribution Hub
      */
-    public double getTotalVoltage(){
+    public double getTotalVoltage() {
         return pdh.getVoltage();
     }
 
     /**
-     * Get the current of a specific channel on the Power Distribution Hub
-     * 
+     * Get the current of a specific channel on the Power Distribution Hub.
+     *
      * @param channel The channel to get the current of
      * @return The current of the channel
      */
@@ -55,8 +57,8 @@ public class PDH {
 
     /**
      * Get all channel currents of the Power Distribution Hub and return them
-     * in an array
-     * 
+     * in an array.
+     *
      * @return An array of all channel currents
      */
     public double[] getChannelCurrents() {
@@ -68,8 +70,8 @@ public class PDH {
     }
 
     /**
-     * Get the total current of the Power Distribution Hub
-     * 
+     * Get the total current of the Power Distribution Hub.
+     *
      * @return Total current of the Power Distribution Hub
      */
     public double getTotalCurrent() {
@@ -77,8 +79,8 @@ public class PDH {
     }
 
     /**
-     * Get the total power of the Power Distribution Hub
-     * 
+     * Get the total power of the Power Distribution Hub.
+     *
      * @return Total power of the Power Distribution Hub
      */
     public double getTotalPower() {
@@ -86,8 +88,8 @@ public class PDH {
     }
 
     /**
-     * Get the total energy of the Power Distribution Hub
-     * 
+     * Get the total energy of the Power Distribution Hub.
+     *
      * @return Total energy of the Power Distribution Hub
      */
     public double getTotalEnergy() {
@@ -97,21 +99,25 @@ public class PDH {
     // Faults //
 
     /**
-     * Get any faults on the Power Distribution Hub
+     * Get any faults on the Power Distribution Hub.
+     *
+     * @return Faults on the Power Distribution Hub
      */
     public PowerDistributionFaults getFaults() {
         return pdh.getFaults();
     }
     
     /**
-     * Get any sticky faults on the Power Distribution Hub
+     * Get any sticky faults on the Power Distribution Hub.
+     *
+     * @return Sticky faults on the Power Distribution Hub
      */
     public PowerDistributionStickyFaults getStickyFaults() {
         return pdh.getStickyFaults();
     }
     
     /**
-     * Clear all sticky faults on the Power Distribution Hub
+     * Clear all sticky faults on the Power Distribution Hub.
      */
     public void clearStickyFaults() {
         pdh.clearStickyFaults();
@@ -120,8 +126,8 @@ public class PDH {
     // Miscellaneous //
 
     /**
-     * Get the firmware version of the Power Distribution Hub
-     * 
+     * Get the firmware version of the Power Distribution Hub.
+     *
      * @return Firmware version of the Power Distribution Hub
      */
     public PowerDistributionVersion getFirmwareVersion() {
