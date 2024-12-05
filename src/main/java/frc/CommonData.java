@@ -6,49 +6,57 @@ package frc;
  * This class is used to store common data that is used throughout the code.
  * </p>
  */
-public class CommonData {
-    
+public final class CommonData {
+
+    /**
+     * Private constructor to prevent instantiation.
+     */
+    private CommonData() {
+        throw new UnsupportedOperationException(
+            "This is a utility class and cannot be instantiated");
+    }
+
     // NavX Data //
 
     /**
-     * NavX Yaw
+     * NavX Yaw.
      */
     private static double navXYaw;
 
     /**
-     * NavX Pitch
+     * NavX Pitch.
      */
     private static double navXPitch;
 
     /**
-     * NavX Roll
+     * NavX Roll.
      */
     private static double navXRoll;
 
     /**
-     * NavX Acceleration X
+     * NavX Acceleration X.
      */
     private static double navXAccelX;
 
     /**
-     * NavX Acceleration Y
+     * NavX Acceleration Y.
      */
     private static double navXAccelY;
 
     /**
-     * NavX Acceleration Z
+     * NavX Acceleration Z.
      */
     private static double navXAccelZ;
 
     /**
-     * NavX Temperature
+     * NavX Temperature.
      */
     private static double navXTemp;
 
     // Getters //
 
     /**
-     * Get the NavX Yaw
+     * Get the NavX Yaw.
      *
      * @return The NavX Yaw
      */
@@ -57,7 +65,7 @@ public class CommonData {
     }
 
     /**
-     * Get the NavX Pitch
+     * Get the NavX Pitch.
      *
      * @return The NavX Pitch
      */
@@ -66,7 +74,7 @@ public class CommonData {
     }
 
     /**
-     * Get the NavX Roll
+     * Get the NavX Roll.
      *
      * @return The NavX Roll
      */
@@ -75,7 +83,7 @@ public class CommonData {
     }
 
     /**
-     * Get the NavX Acceleration X
+     * Get the NavX Acceleration X.
      *
      * @return The NavX Acceleration X
      */
@@ -84,7 +92,7 @@ public class CommonData {
     }
 
     /**
-     * Get the NavX Acceleration Y
+     * Get the NavX Acceleration Y.
      *
      * @return The NavX Acceleration Y
      */
@@ -93,7 +101,7 @@ public class CommonData {
     }
 
     /**
-     * Get the NavX Acceleration Z
+     * Get the NavX Acceleration Z.
      *
      * @return The NavX Acceleration Z
      */
@@ -102,7 +110,7 @@ public class CommonData {
     }
 
     /**
-     * Get the NavX Temperature
+     * Get the NavX Temperature.
      *
      * @return The NavX Temperature
      */
@@ -113,7 +121,7 @@ public class CommonData {
     // Setters //
 
     /**
-     * Set the NavX Yaw
+     * Set the NavX Yaw.
      *
      * @param yaw The Yaw to set
      */
@@ -122,7 +130,7 @@ public class CommonData {
     }
 
     /**
-     * Set the NavX Pitch
+     * Set the NavX Pitch.
      *
      * @param pitch The Pitch to set
      */
@@ -131,7 +139,7 @@ public class CommonData {
     }
 
     /**
-     * Set the NavX Roll
+     * Set the NavX Roll.
      *
      * @param roll The Roll to set
      */
@@ -140,7 +148,7 @@ public class CommonData {
     }
 
     /**
-     * Set the NavX Acceleration X
+     * Set the NavX Acceleration X.
      *
      * @param accelX The Acceleration X to set
      */
@@ -149,7 +157,7 @@ public class CommonData {
     }
 
     /**
-     * Set the NavX Acceleration Y
+     * Set the NavX Acceleration Y.
      *
      * @param accelY The Acceleration Y to set
      */
@@ -158,7 +166,7 @@ public class CommonData {
     }
 
     /**
-     * Set the NavX Acceleration Z
+     * Set the NavX Acceleration Z.
      *
      * @param accelZ The Acceleration Z to set
      */
@@ -167,7 +175,7 @@ public class CommonData {
     }
 
     /**
-     * Set the NavX Temperature
+     * Set the NavX Temperature.
      *
      * @param temp The Temperature to set
      */

@@ -95,7 +95,7 @@ public class PDH {
     public double getTotalEnergy() {
         return pdh.getTotalEnergy();
     }
-    
+
     // Faults //
 
     /**
@@ -106,7 +106,7 @@ public class PDH {
     public PowerDistributionFaults getFaults() {
         return pdh.getFaults();
     }
-    
+
     /**
      * Get any sticky faults on the Power Distribution Hub.
      *
@@ -115,7 +115,7 @@ public class PDH {
     public PowerDistributionStickyFaults getStickyFaults() {
         return pdh.getStickyFaults();
     }
-    
+
     /**
      * Clear all sticky faults on the Power Distribution Hub.
      */

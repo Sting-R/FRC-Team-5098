@@ -9,7 +9,7 @@ import edu.wpi.first.hal.simulation.RoboRioDataJNI;
  * This class holds methods used for monitoring the RoboRIO.
  * </p>
  */
-public class RoboRIO {
+public final class RoboRIO {
 
     /**
      * Private constructor to prevent instantiation.
@@ -18,9 +18,11 @@ public class RoboRIO {
         throw new UnsupportedOperationException(
             "This is a utility class and cannot be instantiated");
     }
-    
+
     /**
      * Get the CPU temperature of the RoboRIO.
+     *
+     * @return The CPU temperature of the RoboRIO
      */
     public static double getCPUTemperature() {
         return RoboRioDataJNI.getCPUTemp();
@@ -30,11 +32,11 @@ public class RoboRIO {
      * Get the voltage of the RoboRIO.
      *
      * <p>
-     * This is the voltage going into the RoboRIO  
+     * This is the voltage going into the RoboRIO
      * This does *not* include any channels on the RoboRIO such as DIO, PWM,
      * CAN, etc.
      * </p>
-     * 
+     *
      * @return The voltage of the RoboRIO
      */
     public static double getVoltage() {
@@ -49,7 +51,7 @@ public class RoboRIO {
      * This does *not* include any channels on the RoboRIO such as DIO, PWM,
      * CAN, etc.
      * </p>
-     * 
+     *
      * @return The current of the RoboRIO
      */
     public static double getCurrent() {
@@ -57,8 +59,8 @@ public class RoboRIO {
     }
 
     /**
-     * Get the serial number of the RoboRIO
-     * 
+     * Get the serial number of the RoboRIO.
+     *
      * @return The serial number of the RoboRIO
      */
     public static String getSerialNumber() {
