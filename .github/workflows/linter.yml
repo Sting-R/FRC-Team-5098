@@ -1,14 +1,14 @@
 # Workflow to lint and format code using super-linter
 #
 # https://github.com/github/super-linter
-
+---
 name: Linting and Formatting
 
 on:
   push:
-    branches: [ "workflow-testing" ] # Change to "main" when merged
+    branches: ["workflow-testing"] # Change to "main" when merged
   pull_request:
-    branches: [ "workflow-testing" ] # Change to "main" when merged
+    branches: ["workflow-testing"] # Change to "main" when merged
 
 jobs:
   super-linter:
