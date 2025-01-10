@@ -8,55 +8,88 @@ import edu.wpi.first.wpilibj.TimesliceRobot;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 /**
- * The methods in this class are called automatically corresponding to each mode, as described in
- * the TimesliceRobot documentation. If you change the name of this class or the package after
- * creating this project, you must also update the Main.java file in the project.
+ * The methods in this class are called automatically corresponding to each
+ * mode, as described in the TimesliceRobot documentation. If you change the
+ * name of this class or the package after creating this project, you must also
+ * update the Main.java file in the project.
  */
 public class Robot extends TimesliceRobot {
-  /** Robot constructor. */
-  public Robot() {
+
+    /**
+     * The period of the robot loop.
+     */
+    private static final double ROBOTPERIOD = 0.005;
+
+    /**
+     * The period of the controller loop.
+     */
+    private static final double CONTROLLERPERIOD = 0.01;
+
+    /**
+     * The period of the first controller loop.
+     */
+    private static final double CONTROLLER1PERIOD = 0.002;
+
+    /**
+     * The period of the second controller loop.
+     */
+    private static final double CONTROLLER2PERIOD = 0.002;
+
+    /**
+     * Robot constructor.
+     */
+    public Robot() {
     // Run robot periodic() functions for 5 ms, and run controllers every 10 ms
-    super(0.005, 0.01);
+    super(ROBOTPERIOD, CONTROLLERPERIOD);
 
     // LiveWindow causes drastic overruns in robot periodic functions that will
     // interfere with controllers
     LiveWindow.disableAllTelemetry();
 
     // Runs for 2 ms after robot periodic functions
-    schedule(() -> {}, 0.002);
+    schedule(() -> { }, CONTROLLER1PERIOD);
 
     // Runs for 2 ms after first controller function
-    schedule(() -> {}, 0.002);
+    schedule(() -> { }, CONTROLLER2PERIOD);
 
     // Total usage:
     // 5 ms (robot) + 2 ms (controller 1) + 2 ms (controller 2) = 9 ms
     // 9 ms / 10 ms -> 90% allocated
-  }
+    }
 
-  @Override
-  public void robotPeriodic() {}
+    @Override
+    public void robotPeriodic() {
+    }
 
-  @Override
-  public void autonomousInit() {}
+    @Override
+    public void autonomousInit() {
+    }
 
-  @Override
-  public void autonomousPeriodic() {}
+    @Override
+    public void autonomousPeriodic() {
+    }
 
-  @Override
-  public void teleopInit() {}
+    @Override
+    public void teleopInit() {
+    }
 
-  @Override
-  public void teleopPeriodic() {}
+    @Override
+    public void teleopPeriodic() {
+    }
 
-  @Override
-  public void disabledInit() {}
+    @Override
+    public void disabledInit() {
+    }
 
-  @Override
-  public void disabledPeriodic() {}
+    @Override
+    public void disabledPeriodic() {
+    }
 
-  @Override
-  public void testInit() {}
+    @Override
+    public void testInit() {
+    }
 
-  @Override
-  public void testPeriodic() {}
+    @Override
+    public void testPeriodic() {
+    }
 }

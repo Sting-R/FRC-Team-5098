@@ -1,4 +1,3 @@
-
 /**
  * Sensors subsystem package.
  * <p>

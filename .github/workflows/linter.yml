@@ -1,0 +1,37 @@
+# Workflow to lint and format code using super-linter
+#
+# https://github.com/github/super-linter
+---
+name: Linting and Formatting
+
+on:
+  push:
+    branches: ["workflow-testing"] # Change to "main" when merged
+  pull_request:
+    branches: ["workflow-testing"] # Change to "main" when merged
+
+jobs:
+  super-linter:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        # Full git history is needed to get a proper list of changed files within 
+        # `super-linter`
+        fetch-depth: 0
+          
+    - name: Lint Code Base
+      uses: github/super-linter@v4
+      # Update the environment here
+      env:
+        # Update to false whenever all previous files have been linted successfully so we
+        # aren't checking the whole codebase each time
+        VALIDATE_ALL_CODEBASE: true
+        # Add files or folders to exclude here
+        FILTER_REGEX_EXCLUDE: ".*vendordeps/.*|.*gradlew|.*.gradle|.*WPILib-License.md.*"
+        DEFAULT_BRANCH: "main"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
