@@ -6,9 +6,9 @@ name: Linting and Formatting
 
 on:
   push:
-    branches: ["workflow-testing"] # Change to "main" when merged
+    branches: ["repo-rework"] # Change to "main" when merged
   pull_request:
-    branches: ["workflow-testing"] # Change to "main" when merged
+    branches: ["repo-rework"] # Change to "main" when merged
 
 jobs:
   super-linter:
