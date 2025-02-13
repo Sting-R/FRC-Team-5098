@@ -1,0 +1,57 @@
+{
+  "HALProvider": {
+    "Other Devices": {
+      "Talon FX (v6)[13]": {
+        "header": {
+          "open": true
+        }
+      }
+    }
+  },
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/Pose": "Field2d",
+      "/SmartDashboard/Alerts": "Alerts",
+      "/SmartDashboard/Auto Chooser": "String Chooser",
+      "/SmartDashboard/Module 0": "Mechanism2d",
+      "/SmartDashboard/Module 1": "Mechanism2d",
+      "/SmartDashboard/Module 2": "Mechanism2d",
+      "/SmartDashboard/Module 3": "Mechanism2d"
+    }
+  },
+  "NetworkTables": {
+    "transitory": {
+      "DriveState": {
+        "open": true
+      },
+      "SmartDashboard": {
+        "Alerts": {
+          "open": true
+        },
+        "Auto Chooser": {
+          "open": true
+        },
+        "Module 0": {
+          "open": true
+        },
+        "Module 1": {
+          "open": true
+        },
+        "Module 2": {
+          "open": true
+        },
+        "Module 3": {
+          "open": true
+        },
+        "open": true
+      }
+    }
+  },
+  "NetworkTables Info": {
+    "Clients": {
+      "open": true
+    },
+    "visible": true
+  }
+}
