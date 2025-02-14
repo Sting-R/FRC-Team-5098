@@ -19,9 +19,13 @@
  *    LB - Reset Field Centric Seed
  * 
  *  Auxiliary Controller:
- *    A - Algae Bar Spin Fast
- *    B - Algae Bar Spit Out
- *    Y - Algae Bar Spin Slow
+ *    A - Level 1 Elevator + Coral Arm 
+ *    B - Level 2 Elevator + Coral Arm
+ *    Y - Level 3 Elevator + Coral Arm
+ *    X - Level 4 Elevator + Coral Arm
+ *    Thumbpad Down - Algae Bar Intake 
+ *    Thumbpad Up - Algae Bar Spit Out 
+ *    Thumbpad left - Algae Bar Spin Slow 
  *    LB - Elevator Level 1
  *    RB - Elevator Level 2
  *    LT - Elevator Level 3
@@ -139,9 +143,9 @@ public class RobotContainer {
      m_auxillaryController.leftTrigger().onTrue(m_elevatorSubsystem.commandMoveToPreset(ElevatorSubsystem.ElevatorLevels.Level3)).onFalse(m_elevatorSubsystem.commandMoveToPreset(ElevatorSubsystem.ElevatorLevels.Level4));//If left trigger pressed, move to level 3. Else, go to top
 
     // Algae Arm Subsystem
-    m_auxillaryController.a().whileTrue(m_AlgaeArmSubsystem.commandMakeBarSpin(true, false, false)).onFalse(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, false));//makes algaeBar spin faster if A pressed, else stop
-    m_auxillaryController.b().whileTrue(m_AlgaeArmSubsystem.commandMakeBarSpin(false, true, false)).onFalse(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, false));//makes algae bar spit out ball if B pressed, else stop
-    m_auxillaryController.y().whileTrue(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, true)).onFalse(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, false));//makes algae bar spin slowly if Y pressed, else stop
+    m_auxillaryController.povUp().whileTrue(m_AlgaeArmSubsystem.commandMakeBarSpin(true, false, false)).onFalse(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, false));//makes algaeBar spin faster if A pressed, else stop
+    m_auxillaryController.povDown().whileTrue(m_AlgaeArmSubsystem.commandMakeBarSpin(false, true, false)).onFalse(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, false));//makes algae bar spit out ball if B pressed, else stop
+    m_auxillaryController.povLeft().whileTrue(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, true)).onFalse(m_AlgaeArmSubsystem.commandMakeBarSpin(false, false, false));//makes algae bar spin slowly if Y pressed, else stop
     //m_auxillaryController.a().whileTrue(m_AlgaeArmSubsystem.commandAlgaeIntake(m_AlgaeArmSubsystem))
                             // .onFalse(m_AlgaeArmSubsystem.commandAlgaeOuttake(m_AlgaeArmSubsystem));
     //This command was taken out due to clashing and we already have a command that does the same thing
