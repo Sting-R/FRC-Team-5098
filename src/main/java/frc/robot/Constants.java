@@ -17,6 +17,10 @@ package frc.robot;
  */
 public final class Constants {
     public static class OperatorConstants {
+
+        /**
+         * An example constant. Any of those can be put in here
+         */
         public static final int kDriverControllerPort = 0;
     }
 }

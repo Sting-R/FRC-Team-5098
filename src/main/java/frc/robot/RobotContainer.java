@@ -21,9 +21,17 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
+
+  /**
+   * This is where any subsystems would get initialized
+   */
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
 
-  // Replace with CommandPS4Controller or CommandJoystick if needed
+  /**
+   * The controller to use as the drive controller
+   * 
+   * This can be replace with CommandPS4Controller or CommandJoystick if needed
+   */
   private final CommandXboxController m_driverController =
       new CommandXboxController(OperatorConstants.kDriverControllerPort);
 

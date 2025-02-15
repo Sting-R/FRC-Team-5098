@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
  * of this class or the package after creating this project, you must also
  * update the Main.java file in the project.
  */
-public class Robot extends TimedRobot {
+public final class Robot extends TimedRobot {
     private Command m_autonomousCommand;
 
     private final RobotContainer m_robotContainer;
@@ -41,9 +41,10 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotPeriodic() {
-        // Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled
-        // commands, running already-scheduled commands, removing finished or interrupted commands,
-        // and running subsystem periodic() methods.  This must be called from the robot's periodic
+        // Runs the Scheduler.  This is responsible for polling buttons, adding
+        // newly-scheduled commands, running already-scheduled commands,
+        // removing finished or interrupted commands, and running subsystem
+        // periodic() methods.  This must be called from the robot's periodic
         // block in order for anything in the Command-based framework to work.
         CommandScheduler.getInstance().run();
     }
